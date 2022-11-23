@@ -28,6 +28,9 @@ app.use('/api/product', productRouter)
 app.use('/api/cart', cartRouter)
 
 app.use('/api/customer', customerRouter)
+app.get('/', (req, res) => {
+    res.send("Chin chào !! This is api design and coding by Nguyên :3 .If you see this message. Have a good day moaz moaz :3")
+})
 
 const port = process.env.PORT || 9000
 app.listen(port, () => { console.log('Starting server') })
