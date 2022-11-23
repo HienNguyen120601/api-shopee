@@ -35,7 +35,7 @@ const validateProduct = (product) => {
         price: yup.string().required(),
         color: yup.string().required(),
         size: yup.string().required(),
-        img: yup.string.required()
+        img: yup.string().required()
     })
     return schema.validate(product).then(product => product).catch((err) => {
         return { message: err.message }
