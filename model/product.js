@@ -24,6 +24,10 @@ const productSchema = new mongoose.Schema({
     img: {
         type: String,
         require: true
+    },
+    detail: {
+        type: String,
+        require: true
     }
 })
 
@@ -35,7 +39,8 @@ const validateProduct = (product) => {
         price: yup.string().required(),
         color: yup.string().required(),
         size: yup.string().required(),
-        img: yup.string().required()
+        img: yup.string().required(),
+        detail: yup.string().required(),
     })
     return schema.validate(product).then(product => product).catch((err) => {
         return { message: err.message }

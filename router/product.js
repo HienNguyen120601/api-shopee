@@ -17,6 +17,7 @@ router.post('/', async (req, res) => {
         color: req.body.color,
         size: req.body.size,
         img: req.body.img,
+        detail: req.body.detail
     })
     product.save().then((product) => {
         res.send(product)
@@ -53,6 +54,8 @@ router.put("/:id", async (req, res) => {
         color: req.body.color,
         size: req.body.size,
         img: req.body.img,
+        detail: req.body.detail
+
 
     }, { new: true })
     if (!updateProduct)
