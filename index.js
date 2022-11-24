@@ -5,8 +5,13 @@ const cors = require('cors')
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
-app.use(cors({ origin: "*" }))
+const corsOptions = {
+    origin: '*',
+    credentials: true,            //access-control-allow-credentials:true
+    optionSuccessStatus: 200,
+}
 
+app.use(cors(corsOptions))
 //import route
 const productRouter = require('./router/product')
 const cartRouter = require('./router/cart')
