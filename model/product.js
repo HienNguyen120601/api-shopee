@@ -28,6 +28,10 @@ const productSchema = new mongoose.Schema({
     detail: {
         type: String,
         require: true
+    },
+    quanlity: {
+        type: String,
+        require: true
     }
 })
 
