@@ -21,7 +21,7 @@ const productHomeSchema = new mongoose.Schema({
         type: String,
         require: true
     },
-    img1: {
+    img: {
         type: String,
         require: true
     },

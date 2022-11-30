@@ -16,7 +16,7 @@ router.post('/', async (req, res) => {
         price: req.body.price,
         color: req.body.color,
         size: req.body.size,
-        img1: req.body.img1,
+        img: req.body.img,
         img2: req.body.img2,
         detail: req.body.detail,
         quanlity: req.body.quanlity
@@ -55,7 +55,7 @@ router.put("/:id", async (req, res) => {
         price: req.body.price,
         color: req.body.color,
         size: req.body.size,
-        img1: req.body.img1,
+        img: req.body.img,
         img2: req.body.img2,
         detail: req.body.detail,
         quanlity: req.body.quanlity
