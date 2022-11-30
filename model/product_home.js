@@ -33,10 +33,7 @@ const productHomeSchema = new mongoose.Schema({
         type: String,
         require: true
     },
-    quanlity: {
-        type: String,
-        require: true
-    }
+
 })
 
 //validate
