@@ -17,6 +17,8 @@ app.use(cors(corsOptions))
 const productRouter = require('./router/product')
 const cartRouter = require('./router/cart')
 const customerRouter = require('./router/customer')
+const productHomeRouter = require('./router/product_home')
+
 
 //Create database
 mongoose.connect("mongodb+srv://c2star07:hiennguyen123@cluster0.n0rogqq.mongodb.net/Shopee?retryWrites=true&w=majority")
@@ -34,6 +36,8 @@ app.use('/api/product', productRouter)
 app.use('/api/cart', cartRouter)
 
 app.use('/api/customer', customerRouter)
+app.use('/api/product_home', productHomeRouter)
+
 app.get('/', (req, res) => {
     res.send("Chin chào !! This is api design and coding by Nguyên :3 .If you see this message. Have a good day moaz moaz :3")
 })
